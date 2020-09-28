@@ -1,0 +1,12 @@
+git config --global user.name "crazy-diya"
+git config --global user.email "dimuthulakshan2012@gmail.com"
+
+git init
+git add .
+git commit -am ""
+git remote add origin linkeka
+git remote -v 
+git push -f origin master
+
+
+git config --list
