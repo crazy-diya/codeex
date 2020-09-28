@@ -52,3 +52,51 @@
           
     </body>
 </html>
+
+
+
+
+
+
+
+
+<%-- 
+    Document   : index
+    Created on : Sep 27, 2020, 11:18:28 AM
+    Author     : NUSKY AHAMED
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Date"%>
+
+<%! int day=7; %>
+<%! String [] days={"monday","tuesday","wednesday","thursday","friday","saturday","sunday"};%>
+<%! int fontsize; %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <% Date date =new Date ();%>
+    <body>
+        <h1>DATE IS!</h1>
+        <%=date%>
+        
+        <%if (day==6 || day==7) 
+        {
+            out.print("weekend");
+        }
+        else
+        {
+            out.print("weekday");
+        }
+        %><br>
+        <% for (int fontsize=0; fontsize<=6; fontsize++){
+        %>
+        <font color="green" size="<%=fontsize%>">
+        <% out.print(days[fontsize]);%>
+        </font> <br> <% }%>
+    </body>
+</html>
+
